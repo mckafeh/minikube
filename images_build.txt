@@ -1,0 +1,26 @@
+
+In a terminal or command prompt, run the following command to configure your Docker client to use the Minikube Docker daemon:
+eval $(minikube docker-env)
+
+Build your Docker images using the docker build command. For example:
+docker build -t my-web-app:latest .
+
+Run your Docker containers using the docker run command. For example:
+docker run -d --name my-web-app my-web-app:latest
+
+
+Apply the deployment to Minikube using the kubectl apply command. For example:
+kubectl apply -f app-deployment.yaml
+
+Run the following command to check the status of your deployment:
+kubectl get pods
+
+-----------------------------
+kubectl create deployment python-web-app --image=my-web-app:latest --replicas=1
+kubectl expose deployment python-web-app --port=80 --target-port=5000 --type=LoadBalancer
+
+
+
+
+
+minikube service python-web-app --url
