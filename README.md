@@ -50,10 +50,10 @@ and is containerize using Docker, and then deploy to Kubernetes with a load bala
 Here are the steps on how to setup the application:
 
 1. Create a new directory for the project and navigate to it:
-
+   ```
    mkdir web-app
    cd web-app
-
+   ```
 2 Create a new Python file called python_web_app.py and add the following lines of code: 
   This code creates a Flask application with a single route that returns the string "Hello, World!".
 
