@@ -36,7 +36,7 @@ install Minikube and kubectl on CentOS 7, you can follow these steps:
    sudo chmod +x kubectl
    ```
 8. Move the kubectl binary to a directory included in your system's PATH.
-   ``
+   ```
    sudo mv kubectl /usr/local/bin/
    ```
 9. Install Minikube:
@@ -66,7 +66,7 @@ Here are the steps on how to setup the application:
    cd web-app
    ```
 2. Create a new Python file called python_web_app.py and add the following lines of code: 
-   This code creates a Flask application with a single route that returns the string "Hello, World!".
+   This code creates a Flask application with a single route that returns the string "Hello, World! <hostName".
    ```
    from flask import Flask
    import socket
@@ -79,10 +79,11 @@ Here are the steps on how to setup the application:
 
    if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0',port=5000)
-  ```	
+   ```	
 	
 3. Create a file called requirements.txt and add the following line below:
    This file specifies the dependencies required by the application
+
    ```
    Flask==2.0.0
    ```
@@ -140,9 +141,9 @@ Here are the steps on how to setup the application:
 	
 13. Use the curl shell command and navigate to the IP from the previous step. You should see the message "Hello, World! <hoetname>" with 
     respective   containers    hostnames displayed if the command is run multipl times.
-   ```
-   curl http://<load-balanced service external IP address>
-   ```
+    ```
+     curl http://<load-balanced service external IP address>
+    ```
 
 
 	
