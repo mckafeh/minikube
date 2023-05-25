@@ -107,7 +107,7 @@ Here are the steps on how to setup the application:
    ```
    This command builds the Docker image and tags it as my-web-app:latest and must be run in the same directory as the Dockerfile.
 
-6 Run the Docker container:
+6. Run the Docker container:
   ```
   docker run -p 5000:5000 my-web-app:latest
   ```
